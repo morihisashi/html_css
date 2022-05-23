@@ -1,11 +1,12 @@
 body {
     padding-top: 90px; /* ヘッダーの後ろに要素が隠れないようにするため */
+    background: #d8d5d5; /* 背景色にグレーを指定 */
 }
 
 header {
     width: 100%; /* 幅いっぱいを指定 */
     height: 50px; /* 高さを50pxに指定 */
-    background: #CCC; /* 背景色にグレーを指定 */
+    background: #FFFFFF; /* 背景色に白を指定 */
     padding: 20px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
     box-sizing: border-box; /* padding分を含んで幅を100%にするため */
     position: fixed; /* ウィンドウを基準に画面に固定 */
@@ -15,16 +16,44 @@ header {
     align-items: center; /* 中の要素を上下中央に並べる */
 }
 
-header .gnav .menu {
+ul {
     display: flex; /* 中の要素を横並びにする */
+    justify-content: flex-end;
+    align-items: center;
 }
 
-header .gnav .menu li {
+li {
     list-style: none; /* リストの[・]を消す */
+    margin-left: 40px; /* メニューそれぞれに間隔をあけるため */
 }
 
-header .gnav .menu li + li {
-    margin-left: 40px; /* メニューそれぞれに間隔をあけるため */
+.search-form {
+    padding: 5px 10px;
+    border: 1px solid #333; border-radius: 30px;
+    width: 460px; max-width: 100%;
+
+    display: flex;  justify-content: center;  align-items: center;
+
+    background: #FFF;
+    font-size: 15px;
+}
+
+.search-input {
+    border: none;  background: none;  outline: none;
+    width: 420px;
+
+    color: #333;
+}
+
+.search-button {
+    border: none;  background: none;  outline: none;
+    color: #999;  font-weight: 900;  font-family: "Font Awesome 5 Free";
+
+    transition: color 0.3s ease 0s;
+}
+
+.search-button:hover {
+    color: #333;
 }
 
 main {
